@@ -463,7 +463,7 @@ Regression_table.stim_and_zone_latency = stim_and_zone_latency;
  %now lets create a table with n and n back lengths (actual and logical)
 %and n and n back stims, and a marker for mouse and day
 
-criteria_percent = length(HD_time)/sum(Reward_idx);
+criteria_percent = sum(Reward_idx)/length(HD_time);
 criteria_percent_indicator =  ones(length(HD_time),1)*criteria_percent;
 reps = length(HD_time);
 mouse_indicator = repmat(onlyID ,reps,1);
