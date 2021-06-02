@@ -87,7 +87,7 @@ data_table.n_minus_one_reward_All =categorical(data_table.n_minus_one_reward_All
 data_table.moving_average_lp_length_n7andback = moving_average_lp_length_n7andback;
 
 logical_rewards = Durations >=GCAMP.Criteria;
-criteria_percent = length(Durations)/sum(logical_rewards);
+criteria_percent = sum(logical_rewards)/length(Durations);
 criteria_percent_indicator =  ones(length(Durations),1)*criteria_percent;
 data_table.criteria_percent_indicator = criteria_percent_indicator;
 %the he idx is tricky. Need to paste all the LP, HE and RE timestamps into a
